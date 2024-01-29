@@ -9,10 +9,10 @@ squareRowIndex=ceil(cell(1)/sudokuDegree);
 squareColumnIndex=ceil(cell(2)/sudokuDegree);
 
 tempNumbersInSquare=[];
-% scan across subquare, picking up numbers (including zeros)
-for row = ((squareRowIndex-1)*sudokuDegree+1):(squareRowIndex*sudokuDegree),
-    for column = ((squareColumnIndex-1)*sudokuDegree+1):(squareColumnIndex*sudokuDegree),
-        tempNumbersInSquare = union(tempNumbersInSquare,matrix(row,column));
+% scan across 4x4 square, picking up numbers (including zeros)
+for i = (squareRowIndex*(sudokuDegree-1)+1):(squareRowIndex*sudokuDegree),
+    for j = (squareColumnIndex*(sudokuDegree-1)+1):(squareColumnIndex*sudokuDegree),
+        tempNumbersInSquare = union(tempNumbersInSquare,matrix(i,j));
     end
 end
 

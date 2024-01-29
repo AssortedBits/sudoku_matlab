@@ -7,6 +7,8 @@ function firstEmpty=findFirstEmpty(matrix)
 % return value will be [0,0] unless an empty element is found 
 firstEmpty=[0,0];
 
+for j = 
+
 for i = 1:size(matrix,1),
     for j = 1:size(matrix,2),
         if matrix(i,j)==0,
